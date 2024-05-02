@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.project-main{
+    display: flex;
+    margin-left: 100px;
+}
+.project-text{
+    font-size: 40px;
+    font-weight: 700;
+ 
+}
+
+
+.wrapper {
+    width: 100%;
+    /* height: 70vh; */
+    display: flex;
+    flex-wrap: wrap          ;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* height: 400px; */
+    display: flex;
+    /* flex-wrap: nowrap; */
+    justify-content: start;
+}
+.img-div{
+    height: 80%;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    height: 500px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+.card > .row {
+    color: white;
+    display: flex;
+    /* flex-wrap: nowrap; */
+}
+
+.card > .row > .icon {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    background: transparent;
+    border:0.2rem solid #7e61e7;
+    color: #7e61e7;
+/* transition: 1s ease; */
+    box-shadow: 0 0 15px #a993fe;
+}
+.icon:hover{
+    color: white;
+    /* transform: scale(1.03)translateY(-5px); */
+   box-shadow: 0 0 25px #a993fe;
+   outline: 1.5px solid #a993fe;
+}
+.row1{
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    background: transparent;
+    border:0.2rem solid #7e61e7;
+    color: #7e61e7;
+/* transition: 0.3s ease; */
+    box-shadow: 0 0 15px #a993fe;
+    height: 50px;
+}
+.description1{
+    display: none;
+}
+.card > .row > .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ 
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(25px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+/* .description h4 {
+    text-transform: uppercase;
+} */
+
+.input-main {
+    display: none;
+}
+
+.input-main:checked + label {
+    width: 600px;
+    
+}
+
+.input-main:checked + label .description {
+    opacity: 1 !important;
+    color: #a993fe;
+    font-size: 30px;
+   
+   
+}
+
+.git{
+font-size: 20px;
+font-weight: 600;
+height: max-content;
+margin-top: 1px;
+text-decoration: none;
+/* color: #fff;
+background: linear-gradient(90deg, #a993fe 0%,#7e61e7 100%); */
+padding: 5px 25px;
+border: none;
+/* outline: 1.5px solid transparent; */
+border-radius: 0.5rem;
+transition: all 0.3s ease;
+cursor: pointer;
+color: #ffffff;
+background: #000;
+outline: 1.5px solid #ffffff;
+box-shadow: 0 0 15px #a993fe;
+}
+@media (max-width:768px){
+    .wrapper {
+   
+       margin-left: 100px;
+        /* height: 60vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    .container {
+        /* height: 150px; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+}
+@media screen and (max-width:500px){
+    .wrapper {
+   
+        margin-left: end;
+        width: 150px;
+         display: flex;
+      flex-wrap: wrap;  
+     }
+     .container {
+         /* height: 150px; */
+         width: 300px;
+         margin-top: 30px;
+         margin-left: end;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: start;
+     }
+     .input-main:checked + label {
+        width: 300px;
+        margin-left: end;
+    }
+    .project-main{
+        align-items: center;
+    }
+    /* .description{
+        font-size: 800px;
+      
+    }
+    .des-txt{
+        font-size: 800px;
+        overflow: hidden;
+    } */
+    .input-main {
+        display: none;
+    }
+
+    
+    .input-main:checked + label .description {
+        opacity: 1 !important;
+        color: #a993fe;
+        font-size: 0px;
+       
+       
+    }
+}
+/* .card[for="c1"] {
+    background-image: url('../../Images/dashboard.jpg');
+} */
+/* .card[for="c2"] {
+    background-image: url('../../Images/Eshoppe.jpg');
+} */
+/* .card[for="c3"] {
+    background-image: url('../../Images/chat.jpg');
+}
+.card[for="c4"] {
+    background-image: url('https://brainpod.ai/wp-content/uploads/2024/04/ai-stock-photo-generator-2024-04-15T150214.000Z.png');
+} */
