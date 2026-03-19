@@ -100,7 +100,6 @@ I am motivated by opportunities to solve complex problems, build high-impact pro
     <div id='skills' className='reveal-on-scroll'><Skills/></div>
     <div id='experience' className='reveal-on-scroll'><Experience/></div>
     <div id='projects' className='reveal-on-scroll'><Projects/></div>
-    {/* <Certificates/> */}
     <div id='contact' className='reveal-on-scroll'><ContactMe/></div>
     <div className='reveal-on-scroll'><Footer/></div>
     </>

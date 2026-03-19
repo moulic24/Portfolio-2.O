@@ -4,7 +4,6 @@ import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import eternal from '../../Images/eternal.png';
 import './Experience.css';
 
 const Experience = () => {
@@ -67,8 +66,8 @@ const Experience = () => {
     contentStyle={{ background: '#1D1836', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  #1D1836' }}
     date="March 2024 - Present"
-    iconStyle={{ background: 'white', color: '#fff' }}
-    icon={<img  className='eternalr-img' src={eternal} alt="Work Image"/>}
+    iconStyle={{ background: 'white', color: '#1D1836' }}
+    icon={<WorkIcon className="timeline-work-icon" />}
   >
     <span style={{fontSize:'25px'}} className="vertical-timeline-element-title">Frontend Developer</span>
     
@@ -92,8 +91,8 @@ const Experience = () => {
     contentStyle={{ background: '#1D1836', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  #1D1836' }}
     date="July 2022 - July 2023"
-    iconStyle={{ background: 'white', color: '#fff' }}
-    icon={<a href="https://drive.google.com/file/d/1st-VSPaeBjckwvTGClDTB0HI_QRPJimt/view?usp=sharing"><img  className='eternal-img' src="https://media.geeksforgeeks.org/wp-content/uploads/20230403183704/gfg_logo.png" alt="Work Image"/></a>}
+    iconStyle={{ background: 'white', color: '#1D1836' }}
+    icon={<WorkIcon className="timeline-work-icon" />}
   >
     <span  style={{fontSize:'25px'}}  className="vertical-timeline-element-title">Technical Head</span>
     

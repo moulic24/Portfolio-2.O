@@ -3,7 +3,6 @@ export const ROUTES = {
   SKILLS: '/skills',
   EXPERIENCE: '/experience',
   PROJECTS: '/projects',
-  CERTIFICATES: '/certificates',
   CONTACT: '/contactme',
 };
 

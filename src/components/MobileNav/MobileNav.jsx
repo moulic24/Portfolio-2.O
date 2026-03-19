@@ -2,7 +2,7 @@ import React from 'react'
 import './MobileNav.css';
 import { Link, useNavigate } from 'react-router-dom'
 import icon from '../../Images/bitmoji-icon.png';
-import { EXTERNAL_LINKS, NAV_ITEMS } from '../../utils/constants';
+import { NAV_ITEMS } from '../../utils/constants';
 const MobileNav = ({isOpen,toggleMenu}) => {
     const navigate = useNavigate();
 

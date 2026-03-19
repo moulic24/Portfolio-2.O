@@ -7,7 +7,7 @@ const ContactInfoCard = ({name,text}) => {
   return (
     <div className='contact-details-card'>
       <div className="icon">
-      {name == "Github" ? <GitHubIcon className='img'/> : name== "Mail" ? <MailIcon className='img'/> : <LinkedInIcon/>}
+      {name === "Github" ? <GitHubIcon className='img'/> : name === "Mail" ? <MailIcon className='img'/> : <LinkedInIcon/>}
       </div>
       <p>{text}</p>
     </div>

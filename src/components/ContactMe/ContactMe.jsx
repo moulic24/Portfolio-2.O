@@ -1,6 +1,5 @@
 import React from 'react'
 import './ContactMe.css'
-import ContactInfoCard from './ContactInfoCard/ContactInfoCard'
 import ContactForm from './ContactForm/ContactForm'
 const ContactMe = () => {
   return (
