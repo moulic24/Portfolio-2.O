@@ -1,41 +1,71 @@
-import React, { useState } from 'react'
-import { SKILLS } from '../../utils/data'
-import SkillCard from './SkillCard/SkillCard'
+import React, { useMemo, useState } from 'react';
+import { SKILLS } from '../../utils/data';
 import './Skills.css';
-import SkillsInfoCard from './SkillsInfoCard/SkillsInfoCard';
-const Skills = () => {
-  const [selectedSkill,setSelectedSkill] = useState(SKILLS[0]);
-  const handleSelectSkill = (data) =>{
-    setSelectedSkill(data);
-  };
-    return (
-    <div className='skills-container'>
-      <div className='skills-text'>
-      <span>Technical Proficiency</span>
-      </div>
-      <div className="skills-content">
-        <div className="skills">
-          {SKILLS.map((item)=>(
-            <SkillCard
-            key={item.title}
-            iconUrl={item.icon}
-            title={item.title}
-            isActive={selectedSkill.title === item.title}
-            onClick = {()=>{
-                handleSelectSkill(item);
-            }}
-            />
-          ))}         
-        </div>
-        <div className="skills-info">
-            <SkillsInfoCard
-            heading={selectedSkill.title}
-            skills={selectedSkill.skills}
-            />
-        </div>
-      </div>
-    </div>
-  )
-}
 
-export default Skills
+const Skills = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const categories = useMemo(
+    () => ['All', ...SKILLS.map((item) => item.title)],
+    []
+  );
+
+  const filteredSkills = useMemo(() => {
+    if (activeCategory === 'All') {
+      return SKILLS.flatMap((group) =>
+        group.skills.map((skill) => ({
+          name: skill.skill,
+          category: group.title,
+        }))
+      );
+    }
+
+    const categoryData = SKILLS.find((group) => group.title === activeCategory);
+    return (categoryData?.skills || []).map((skill) => ({
+      name: skill.skill,
+      category: activeCategory,
+    }));
+  }, [activeCategory]);
+
+  const createBadge = (name) =>
+    name
+      .split(' ')
+      .map((word) => word[0])
+      .join('')
+      .slice(0, 2)
+      .toUpperCase();
+
+  return (
+    <section className='skills-container'>
+      <div className='skills-text'>
+        <span>Skills</span>
+      </div>
+
+      <div className='skills-filters'>
+        {categories.map((category) => (
+          <button
+            key={category}
+            type='button'
+            className={`skill-filter-pill ${
+              activeCategory === category ? 'active' : ''
+            }`}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div className='skills-grid'>
+        {filteredSkills.map((skillItem) => (
+          <div className='skill-grid-card' key={`${skillItem.category}-${skillItem.name}`}>
+            <div className='skill-grid-icon'>{createBadge(skillItem.name)}</div>
+            <p>{skillItem.name}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Skills;

@@ -1,22 +1,67 @@
-import React from 'react'
-import './Experience.css'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
-import StarIcon from '@mui/icons-material/Star';
+import WorkIcon from '@mui/icons-material/Work';
+import React from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
 import eternal from '../../Images/eternal.png';
-import ologo from '../../Images/ologo.png'
+import './Experience.css';
+
 const Experience = () => {
   return (
     <div>
         <div className="we-main">
-            <span className='we-text'>Work Experience</span>
+            <span className='we-text'>Work Experience & Education</span>
         </div>
         <div className="vertical-main">
-
-       
       <VerticalTimeline>
+      <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{ background: '#1D1836', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid #1D1836' }}
+    date="June 2024 – Dec 2024 · Hyderabad"
+    iconStyle={{ background: 'white', color: '#1D1836' }}
+    icon={<SchoolIcon className="timeline-work-icon" />}
+  >
+    <span style={{fontSize:'20px'}} className="vertical-timeline-element-title">Vignan's Institute of Information Technology</span>
+    <h4 style={{lineHeight:'40px'}} className="vertical-timeline-element-subtitle">Bachelor's in Computer Science</h4>
+    <h4 className="vertical-timeline-element-subtitle">2020-2024</h4>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{ background: '#1D1836', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid  #1D1836' }}
+    date="Dec 2024 – Present · Hyderabad"
+    iconStyle={{ background: 'white', color: '#1D1836' }}
+    icon={<WorkIcon className="timeline-work-icon" />}
+  >
+    <span style={{fontSize:'25px'}} className="vertical-timeline-element-title">Jr Software Engineer</span>
+    <h3 style={{lineHeight:'40px'}} className="vertical-timeline-element-subtitle">Rapidue Technologies (Recykal)</h3>
+    <ul className="exp-list">
+        <ul>
+          <li>Developed 4+ React.js modules using Material UI, improving UI performance and reducing load time by 20%, while integrating Google Analytics tracking for data-driven product insights.</li>
+          <li>Built cross-platform desktop modules using Electron.js, React.js, and Node.js to support printer integration workflows.</li>
+          <li>Contributed to the Printing Test Bed Portal, developing key UI modules and a Build Management system for uploading, managing, and downloading software builds.</li>
+        <li>Implemented Redux Toolkit & RTK Query for efficient API integration, caching, and scalable state management while following Agile SDLC, code reviews, and version control with Git.</li>
+        </ul>
+    </ul>
+  </VerticalTimelineElement>
+
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{ background: '#1D1836', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid #1D1836' }}
+    date="June 2024 – Dec 2024 · Hyderabad"
+    iconStyle={{ background: 'white', color: '#1D1836' }}
+    icon={<WorkIcon className="timeline-work-icon" />}
+  >
+    <span style={{fontSize:'25px'}} className="vertical-timeline-element-title">Software Trainee</span>
+    <h3 style={{lineHeight:'40px'}} className="vertical-timeline-element-subtitle">Recykal</h3>
+    <ul className="exp-list">
+      <li>Contributed new modules to a production codebase within 6 months of onboarding &amp; resolved 90% of critical bugs.</li>
+    </ul>
+  </VerticalTimelineElement>
+
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{ background: '#1D1836', color: '#fff' }}
@@ -41,53 +86,7 @@ const Experience = () => {
 </ul>
 
   </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: '#1D1836', color: '#fff' }}
-    contentArrowStyle={{ borderRight: '7px solid #1D1836' }}
-    date="December 2023 - March 2024"
-    iconStyle={{ background: 'white', color: '#fff' }}
-    icon={<a href="https://drive.google.com/file/d/1P3OnIxAtZueV5TDqBTZyU12-YRtPYIaG/view?usp=sharing"><img  className='eternal-img'  src="https://slashmark.cloud/images/aicte.png" alt="Work Image"/></a>}
-  >
-    <span style={{fontSize:'25px'}}  className="vertical-timeline-element-title">Full Stack Developer</span>
-    
-    <h3 style={{lineHeight:'40px'}}  className="vertical-timeline-element-subtitle">Slash Mark - AICTE</h3>
-    <ul>
-    
-   
-        <ul style={{lineHeight:'20px'}}>
-            <li className='sub'>I've proficiently completed the tasks, which involved thorough debugging and frontend optimizations, resulting in an elevated user experience. ⚙️</li>
-            <li style={{marginTop:'15px'}} className='sub'>Created an online portal with a farmer-friendly interface, powered by React framework, to facilitate direct sales of dairy products from the farm to consumers. 🧑‍💻</li>
-        </ul>
-  
-</ul>
 
-  </VerticalTimelineElement>    
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: '#1D1836', color: '#fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  #1D1836' }}
-    date="June 2023 - July 2023"
-    iconStyle={{ background: 'white', color: '#fff' }}
-    icon={<a href="https://drive.google.com/file/d/1B8iw8xvQvmF_nfVc9EZz_9fV8IElR6QC/view?usp=sharing"><img  className='eternal-img' src={ologo} alt="Work Image"/></a>}
-  >
-    <span style={{fontSize:'25px'}}  className="vertical-timeline-element-title">Web Developer</span>
-    
-    <h3 style={{lineHeight:'40px'}}  className="vertical-timeline-element-subtitle">Ocatnet</h3>
-    {/* <p>
-      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p> */}
-    <ul>
-    
-   
-        <ul style={{lineHeight:'20px'}}>
-            <li className='sub'>Developed a responsive landing page for a shoe-selling e-commerce store using HTML, CSS, JavaScript. 🧑‍💻</li>
-            <li style={{marginTop:'15px'}} className='sub'>Created a dynamic To-dolist web app using React.js, enabling users to manage tasks and track their progress. 📈</li>
-        </ul>
-  
-</ul>
-
-  </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{ background: '#1D1836', color: '#fff' }}
@@ -115,11 +114,6 @@ const Experience = () => {
 </ul>
 
   </VerticalTimelineElement>
- 
-  {/* <VerticalTimelineElement
-    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-    icon={<StarIcon />}
-  /> */}
 </VerticalTimeline>
 </div>
     </div>

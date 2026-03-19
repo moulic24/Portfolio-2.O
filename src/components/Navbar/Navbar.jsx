@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import {Link} from 'react-router-dom'
-import icon from '../../Images/bitmoji-icon.png';
-import MenuIcon from '@mui/icons-material/Menu';
-import MobileNav from '../MobileNav/MobileNav';
 import CloseIcon from '@mui/icons-material/Close';
-import { useNavigate } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import icon from '../../Images/bitmoji-icon.png';
+import { NAV_ITEMS } from '../../utils/constants';
+import MobileNav from '../MobileNav/MobileNav';
+import './Navbar.css';
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const handleClick = (path) => {
-    navigate(path);
-    window.scrollTo(0, 0); // Scroll to the top of the page
+  const handleClick = (sectionId) => {
+    const hash = sectionId === 'home' ? '' : `#${sectionId}`;
+    navigate(`/${hash}`);
   };
   const [openMenu,setOpenMenu] = useState(false);
   const toggleMenu = () =>{
@@ -27,28 +27,20 @@ const Navbar = () => {
         <div className='nav-content'>
             <img  className="logo" src={icon} alt="nav-logo"/>
             <ul>
-                <li>
-                <Link className='menu-item' onClick={() => handleClick('/') }to='/'>Home</Link>
-                </li>
-                <li>
-                <Link className='menu-item' to='/skills'>Skills</Link>
-                </li>
-                <li>
-                <Link className='menu-item' to='/experience'>Work Experience</Link>
-                </li>
-                <li>
-                <Link className='menu-item' to='/projects'>Projects</Link>
-                </li>
-                <li>
-                <Link className='menu-item' to='/certificates'>Certificates</Link>
-                </li> 
-                <li>
-                <Link className='menu-item' to='/contactme'>Contact Me</Link>
-                </li>
-                <a href="mailto:moulic523@gmail.com" className='contact-btn'>Hire Me</a>
+                {NAV_ITEMS.map((item) => (
+                  <li key={item.sectionId}>
+                    <Link
+                      className='menu-item'
+                      to={item.sectionId === 'home' ? '/' : `/#${item.sectionId}`}
+                      onClick={() => handleClick(item.sectionId)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
             </ul>
-            { innerWidth && <button class='menu-btn' onClick={toggleMenu}>
-              <span class='menu-img'
+            { innerWidth && <button className='menu-btn' onClick={toggleMenu}>
+              <span className='menu-img'
               style={{fontSize:'1.8rem'}}
               >
                {openMenu ? <CloseIcon/> : <MenuIcon/>}

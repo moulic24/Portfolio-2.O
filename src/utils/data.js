@@ -1,16 +1,16 @@
 import outlinef from '../../src/Images/outlinef.gif'
 import backend from '../../src/Images/backend.gif'
 import tools from '../../src/Images/tools.gif'
-import core from '../../src/Images/core.gif'
+
 export const SKILLS = [
     {
         title:"Frontend",
         icon:outlinef,
         skills:[
-            {skill:"HTML",percentage:"80%"},
-            {skill:"CSS",percentage:"90%"},
-            {skill:"Javascript",percentage:"70%"},
-            {skill:"Reactjs",percentage:"80%"},
+            {skill:"HTML",percentage:"85%"},
+            {skill:"CSS",percentage:"85%"},
+            {skill:"JavaScript",percentage:"85%"},
+            {skill:"React.js",percentage:"85%"},
         ],
     },
     {
@@ -18,30 +18,24 @@ export const SKILLS = [
         icon:backend,
         skills:[
             {skill:"Node.js",percentage:"80%"},
-            {skill:"Express.js",percentage:"70%"},
-            {skill:"Mongo DB",percentage:"70%"},
-            {skill:"SQL",percentage:"80%"}
+            {skill:"Express.js",percentage:"75%"},
+            {skill:"Web Sockets",percentage:"70%"},
+        ],
+    },
+    {
+        title:"Database",
+        icon:backend,
+        skills:[
+            {skill:"MongoDB",percentage:"75%"},
+            {skill:"MySQL",percentage:"75%"},
         ],
     },
     {
         title:"Tools",
         icon:tools,
         skills:[
-            {skill:"Git & Github",percentage:"80%"},
-            {skill:"Visual Studio Code",percentage:"90%"},
-            {skill:"Responsive Design",percentage:"70%"},
+            {skill:"Git",percentage:"85%"},
+            {skill:"Jira",percentage:"80%"},
         ],
     },
-    {
-        title:"Core",
-        icon:core,
-        skills:[
-            {skill:"Computer Networks",percentage:"80%"},
-            {skill:"Operating Systems",percentage:"80%"},
-            {skill:"Data Base and Management Systems",percentage:"80%"},
-        ],
-    },
-    
-    
 ];
- 

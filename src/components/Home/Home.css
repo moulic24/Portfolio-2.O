@@ -5,6 +5,14 @@
     flex-wrap: wrap;
 }
 
+.hero-fade {
+  animation: fadeSlideUp 0.75s ease forwards;
+}
+
+.hero-fade-delay {
+  animation-delay: 0.15s;
+}
+
 .glowing-text {
   color: #a280ff; /* A lighter shade of purple */
   animation: glow 1.5s infinite alternate; /* Adjust animation duration as needed */
@@ -16,6 +24,17 @@
   }
   to {
       text-shadow: 0 0 20px #a280ff, 0 0 30px #a280ff, 0 0 40px #a280ff; /* Adjust shadow size and color */
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -228,3 +247,14 @@ box-shadow: 0 0 15px #a993fe;
     align-items: flex-end;
     gap: 2rem;
 } */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

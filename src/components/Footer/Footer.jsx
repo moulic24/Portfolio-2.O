@@ -4,6 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import './Footer.css'
+import { EXTERNAL_LINKS } from '../../utils/constants';
 const Footer = () => {
   return (
     <div className='footer-div'>
@@ -15,13 +16,13 @@ const Footer = () => {
     <div className="footer-content">
     <ul className='ficon'>
         <li>
-        <a href='https://github.com/moulic24'><GitHubIcon/></a>
+        <a href={EXTERNAL_LINKS.GITHUB}><GitHubIcon/></a>
         </li>
         <li>
-        <a href='https://www.linkedin.com/in/chandra-mouli-3b5507237/'><LinkedInIcon/></a>
+        <a href={EXTERNAL_LINKS.LINKEDIN}><LinkedInIcon/></a>
         </li>
         <li>
-        <a href='mailto:moulic523@gmail.com'><MailIcon/></a>
+        <a href={EXTERNAL_LINKS.EMAIL}><MailIcon/></a>
         </li>
     </ul>
     </div>

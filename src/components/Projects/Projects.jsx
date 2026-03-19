@@ -5,6 +5,7 @@ import Eshoppe from '../../Images/Eshoppe.jpg';
 import dashboard from '../../Images/dashboard.jpg';
 import ambulance from '../../Images/ambulance.jpg';
 import gfg from '../../Images/gfg.jpg';
+import { PROJECT_REPO_URLS } from '../../utils/constants';
 const Projects = () => {
     const [indexSelected, setIndexSelected] = useState(0);
  
@@ -16,35 +17,35 @@ const Projects = () => {
           id: '1',
           description: 'DASHBOARD',
           imageUrl: dashboard,
-          code: "https://github.com/moulic24/Dynamic-Dashboard",
+          code: PROJECT_REPO_URLS.DASHBOARD,
           coden:'Github'
         },
         {
           id: '2',
           description: 'ESHOPPE',
           imageUrl: Eshoppe,
-          code: "https://github.com/moulic24/E-Shoppe",
+          code: PROJECT_REPO_URLS.ESHOPPE,
           coden:'Github'
         },
         {
           id: '3',
           description: 'CHAT APPLICATION',
           imageUrl: chat,
-          code: "https://github.com/moulic24/Sockets",
+          code: PROJECT_REPO_URLS.CHAT,
           coden:'Github'
         },
         {
           id: '4',
           description: 'AMBULANCE TRACKER',
           imageUrl: ambulance,
-          code: "https://github.com/moulic24/Ambulance-Connect-Pro",
+          code: PROJECT_REPO_URLS.AMBULANCE,
           coden:'Github'
         },
         {
           id: '5',
           description: 'GFG',
           imageUrl: gfg,
-          code: "https://github.com/moulic24/GFG-student-chapter",
+          code: PROJECT_REPO_URLS.GFG,
           coden:'Github'
         },
       ];
